@@ -31,6 +31,7 @@
 //  console.log(val1);
  val1 = null ?? 10 ?? 12
 //  console.log(val1);
+
  
  
  
