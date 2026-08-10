@@ -16,11 +16,39 @@ color: whitesmoke;
          <h1  id="title" class="practise">DOM Learning On Chai Aur Code <span style="display:none"> vinit saini</span></h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis maiores, qui delectus assumenda earum dolores? Corporis hic dolor totam ut.</p>
     </div>
-    <input type="password" name="" id="">
-    <ul>
-        <li>one</li>
-         <li>two</li>
-          <li>three</li>
-    </ul>
+    <div class="parent" style="background-color: #212121;" colour="white">
+        <!-- this is a commit -->
+        <div class="day">Monday</div>
+         <div class="day">Tuesday</div>
+          <div class="day">Wednesday</div>
+           <div class="day">Thrusday</div>
+    </div>
+    
 </body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1]);
+
+for(let i = 0;i <parent.children.length; i++){
+    console.log(parent.children[i].innerHTML);
+}
+parent.children[1].style.color = 'grey'
+// console.log(parent.firstElementChild);
+// console.log(parent.lastElementChild);
+
+const dayone = document.querySelector('.day');
+// console.log(dayone);
+// console.log(dayone.parentElement);
+// console.log(dayone.nextElementSibling);
+
+console.log("NODES: " , parent.childNodes);
+
+
+
+
+
+</script>
+
 </html>
