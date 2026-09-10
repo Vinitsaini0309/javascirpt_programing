@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">Click Me</button>
+    
+</body>
+<script>
+    const Sayvinit = function() {
+        console.log("vinit")
+    }
+    const Changetext = function(){
+        document.querySelector('h1').
+        innerHTML = "BEST JAVASCRIPT SERIES"
+    }
+    const changeme = setTimeout(Changetext,3000)
+    document.querySelector('#stop').
+    addEventListener('click' , function(){
+        clearTimeout(changeme)
+        console.log('STTOPED');
+        
+    })
+</script>
+</html>
