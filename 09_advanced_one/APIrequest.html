@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .profilecard{
+        display: flex;
+        height: 600px;
+        width: 700px;
+        background-color: grey;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<body style="background-color: #212121;">
+    <div class="profilecard">
+
+    </div>
+    
+</body>
+<script>
+    let data;
+const apiRequest = 'https://api.github.com/users/vinitsaini0309'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET' , apiRequest )
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+             data = JSON.parse(this.responseText)
+            console.log( typeof data);
+             console.log(data.followers);
+             console.log(data.login);
+
+             let card = document.getElementsByClassName('profilecard')[0]
+card.innerHTML = ` <img src= '${data.avatar_url}'>
+<br>
+YOUR Github Usernamae Is ${data.login}
+<br>
+                  YOUR Followers are ${data.followers}
+                  <br>
+
+` 
+
+        }
+        
+    }
+    xhr.send();
+
+
+</script>
+</html>
